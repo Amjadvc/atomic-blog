@@ -14,6 +14,12 @@ body {
   padding: 32px;
 }
 
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+}
+
 .fake-dark-mode {
   filter: invert(100%);
   transition: all 0.5s;
@@ -43,11 +49,24 @@ header {
   display: flex;
 }
 
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 h1 {
   font-size: 26px;
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 18px;
+  }
 }
 
 h1 span {
@@ -73,6 +92,23 @@ header div {
   align-items: center;
 }
 
+@media (max-width: 992px) {
+  header div {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 768px) {
+  header div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header div input {
+    width: 100%;
+  }
+}
 header button {
   font-size: 14px;
 }
@@ -83,6 +119,18 @@ form {
   display: flex;
   gap: 24px;
   margin-bottom: 40px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  form input {
+    width: 100%;
+  }
 }
 
 main {
@@ -104,6 +152,9 @@ button {
   color: inherit;
 }
 
+textarea {
+  resize: vertical;
+}
 input {
   width: 12rem;
 }
@@ -143,6 +194,18 @@ main ul {
   gap: 32px;
 }
 
+@media (max-width: 992px) {
+  main ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
+}
+
 main li {
   border: 1px solid #ffe8cc;
   padding: 16px 20px;
@@ -160,12 +223,27 @@ aside ul {
   gap: 2px;
 }
 
+@media (max-width: 480px) {
+  aside ul {
+    gap: 10px;
+  }
+}
+
 aside li {
   border: 1px solid #ffe8cc;
   padding: 4px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  aside li {
+    flex-direction: column;
+    padding: 10px 7px;
+    gap: 12px;
+    align-items: end;
+  }
 }
 
 h2 + button {
